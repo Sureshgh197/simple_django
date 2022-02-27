@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>This is Home Page!!!!!!!!!!!!</h1>
+    {% if user.is_anonymous %}
+    hi Please Login or Register
+    {% else %} <br>
+    hi{{ user }}
+    {% endif %}
+    <br>
+    <hr>
+    <h2>Login <a href="login">Here</a></h2>
+    <br>
+    <hr>
+    <h2>SignUp <a href="signup">Here</a></h2>
+    <hr>
+    {% if user.is_authenticated %}
+    <h2>Logout <a href="logout">Here</a></h2>
+    {% endif %}
+</body>
+</html>
